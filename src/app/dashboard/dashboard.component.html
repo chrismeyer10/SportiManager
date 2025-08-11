@@ -1,0 +1,8 @@
+<h2>Dashboard</h2>
+<p>Select your favorite Bundesliga team:</p>
+<select [(ngModel)]="selectedTeam">
+  <option [ngValue]="''">-- choose a team --</option>
+  <option *ngFor="let team of teams" [ngValue]="team">{{ team }}</option>
+</select>
+<p *ngIf="selectedTeam">You selected: {{ selectedTeam }}</p>
+<button (click)="logout()">Logout</button>
